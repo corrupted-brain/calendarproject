@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="http://nepalidatepicker.sajanmaharjan.com.np/nepali.datepicker/js/nepali.datepicker.v4.0.min.js" type="text/javascript"></script>
+   
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="stylesheet" href="style.css" />
@@ -11,6 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
+
   <body>
     <div class="container">
       <label for="appointment-type" class="label"
@@ -22,7 +25,7 @@
         <option value="bs">BS</option>
       </select>
 
-      <div id="calendar" style="display: none">
+      <div id="english-datepicker" style="display: none">
         <label for="meeting-time">Select your date:</label>
         <input
           type="datetime-local"
@@ -34,29 +37,32 @@
         />
     
 
-    <script src="index.js"></script>
-
-      <p>
-        <input type="text" id="nepali-datepicker" placeholder="Select Nepali Date"/>
+        
+     </div>
+     <p>
+      <input type="text" id="nepali-datepicker" placeholder="Select Nepali Date"/>
+      <script src="http://nepalidatepicker.sajanmaharjan.com.np/nepali.datepicker/js/nepali.datepicker.v4.0.min.js" type="text/javascript"></script>
     </p>
+        
+        
+        <script src="index.js"></script>
 
-    <script src="http://nepalidatepicker.sajanmaharjan.com.np/nepali.datepicker/js/nepali.datepicker.v4.0.min.js" type="text/javascript"></script>
-   
-
-        <script type="text/javascript">
+<script type="text/javascript">
             window.onload = function() {
                 var mainInput = document.getElementById("nepali-datepicker");
                 mainInput.nepaliDatePicker();
             };
             let btn2= document.querySelector("#appointment-type");
-btn2.addEventListener("change", function (e) {
-    e.preventDefault();
-    if (this.value === "bs") {
-        document.querySelector("#nepali-datepicker").style.display = "block";
-    } else {
-        document.querySelector("#nepali-datepicker").style.display = "none";
-    }
-})
+// btn2.addEventListener("change", function (e) {
+//     e.preventDefault();
+//     if (this.value === "ad") {
+//         document.querySelector("#english-datepicker").style.display = "block";
+//         document.querySelector("#nepali-datepicker").style.display = "none";
+//     } else {
+//         document.querySelector("#nepali-datepicker").style.display = "block";
+        
+//     }
+// })
         </script>
   </body>
 </html>
